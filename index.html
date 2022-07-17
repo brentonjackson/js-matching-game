@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW4 - Payroll</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="payroll.js" defer></script>
+  </head>
+  <body>
+    <!-- This page prints a payroll report -->
+
+    <!-- After table, a summary is given displaying total pay for all employees -->
+    <div class="navbar">
+      <!-- <a href="#">Payroll</a>
+      <a href="./game-home.html">Game</a> -->
+      <ul class="horizontal gray">
+        <li><a class="active" href="#">Payroll</a></li>
+        <li><a href="./game-home.html">Game</a></li>
+      </ul>
+    </div>
+    <h1>Payroll Report</h1>
+    <table id="payroll-table">
+      <tbody id="payroll-table-body">
+        <tr>
+          <th>Employee Index</th>
+          <th>Num Hrs Worked</th>
+          <th>Pay</th>
+        </tr>
+      </tbody>
+    </table>
+    <div class="summary">Total Pay:</div>
+  </body>
+</html>

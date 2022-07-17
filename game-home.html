@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- <a href="./index.html">Payroll</a>
+      <a href="#">Game</a> -->
+      <ul class="horizontal gray">
+        <li><a href="./index.html">Payroll</a></li>
+        <li><a class="active" href="#">Game</a></li>
+      </ul>
+    </div>
+    <section class="memory-game">
+      <div class="content">
+        <h1>Matching Game</h1>
+        <h3>Rules:</h3>
+        <p class="rules">
+          User will choose between pairs of 8, 10, or 12 photos. All pictures
+          will be randomly distributed at the beginning of the game.
+          <br /><br />
+          You are given 3 levels of difficulty: 3, 5, 8 seconds to memorize the
+          locations; then the pictures will be hidden.
+          <br /><br />
+          Your goal is to match each of the pictures with its copy, clicking the
+          two matching images to reveal them.
+          <br /><br />
+          The game will be timed. If you complete the game within the timeframe,
+          you win!
+        </p>
+        <hr class="solid" />
+        <!-- <button class="play-button"><a href="./game.html">Play Game</a></button> -->
+        <form name="gameForm" action="./game.html">
+          <h1>Game Settings</h1>
+          <p>Please choose number of pics:</p>
+          <input type="radio" id="8" name="numPics" value="8" checked />
+          <label for="8">8</label>
+          <input type="radio" id="10" name="numPics" value="10" />
+          <label for="10">10</label>
+          <input type="radio" id="12" name="numPics" value="12" />
+          <label for="12">12</label>
+
+          <p>Please select difficulty level:</p>
+          <input type="radio" id="easy" name="difficulty" value="8" />
+          <label for="easy">Easy (8 sec to memorize)</label><br />
+          <input type="radio" id="medium" name="difficulty" value="5" />
+          <label for="medium">Medium (5 sec to memorize)</label><br />
+          <input type="radio" id="hard" name="difficulty" value="3" checked />
+          <label for="hard">Hard (3 sec to memorize)</label><br /><br />
+          <input class="play-button" type="submit" value="Play Game!!" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

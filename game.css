@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.content {
+  background: #1c7ccc;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+  border-radius: 5px;
+}
+.content h1 {
+  text-align: center;
+  margin: 10px;
+}
+.content h3 {
+  margin: 10px;
+  text-align: left;
+}
+.content .rules {
+  margin: 10px 20px 20px;
+}
+.play-button {
+  text-align: center;
+  width: fit-content;
+  position: inherit;
+  left: 25%;
+  margin: 10px;
+  padding: 10px;
+}
+.play-button a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin-top: 20px;
+}
+.content form {
+  margin: 20px auto;
+  position: relative;
+}
+
+form p {
+  margin: 10px 0;
+}
+
+form input {
+  padding: 5px;
+  margin: 5px;
+}
+.timer-div {
+  margin: auto;
+}
+
+.memory-card {
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.memory-card.numPics-8 {
+  /* width: calc(25% - 10px); */
+  flex: 1 0 23%;
+  height: calc(25% - 10px);
+}
+.memory-card.numPics-10 {
+  /* width: calc(25% - 10px); */
+  flex: 1 0 18%;
+  height: calc(25% - 10px);
+}
+.memory-card.numPics-12 {
+  /* width: calc(25% - 10px); */
+  flex: 1 0 15%;
+  height: calc(25% - 10px);
+}
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background: #1c7ccc;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
